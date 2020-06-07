@@ -11,7 +11,19 @@ const routes: Routes = [
   {
     path: 'action-sheet',
     loadChildren: () => import('./action-sheet/action-sheet.module').then( m => m.ActionSheetPageModule)
+  },  {
+    path: 'alert',
+    loadChildren: () => import('./alert/alert.module').then( m => m.AlertPageModule)
   },
+  {
+    path: 'badge',
+    loadChildren: () => import('./badge/badge.module').then( m => m.BadgePageModule)
+  },
+  {
+    path: 'button',
+    loadChildren: () => import('./button/button.module').then( m => m.ButtonPageModule)
+  },
+
 ];
 
 @NgModule({
