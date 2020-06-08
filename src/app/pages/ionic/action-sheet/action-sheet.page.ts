@@ -24,33 +24,33 @@ export class ActionSheetPage implements OnInit {
         role: 'destructive',
         icon: 'trash',
         handler: () => {
-          this.commonService.toast('Info', 'Delete clicked!', 'bottom');
+          this.commonService.toast('Delete clicked!');
         }
       }, {
         text: 'Share',
         icon: 'share',
         handler: () => {
           console.log('Share clicked');
-          this.commonService.toast('Info', 'Delete clicked!', 'bottom');
+          this.commonService.toast('Delete clicked!');
         }
       }, {
         text: 'Play',
         icon: 'caret-forward-circle',
         handler: () => {
-          this.commonService.toast('Info', 'Play clicked!', 'bottom');
+          this.commonService.toast('Play clicked!');
         }
       }, {
         text: 'Favorite',
         icon: 'heart',
         handler: () => {
-          this.commonService.toast('Info', 'Favorite clicked!', 'bottom');
+          this.commonService.toast('Favorite clicked!');
         }
       }, {
         text: 'Cancel',
         icon: 'close',
         role: 'cancel',
         handler: () => {
-          this.commonService.toast('Info', 'Cancel clicked!', 'bottom');
+          this.commonService.toast('Cancel clicked!');
         }
       }]
     });

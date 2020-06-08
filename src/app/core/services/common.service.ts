@@ -8,7 +8,7 @@ export class CommonService {
 
   constructor(public toastController: ToastController) {}
 
-  async toast(header: string, message: string, position: 'bottom' | 'middle' | 'top') {
+  async toast(message: string, header?: string ,position?: 'bottom' | 'middle' | 'top') {
     const toast = await this.toastController.create({
       header,
       message,

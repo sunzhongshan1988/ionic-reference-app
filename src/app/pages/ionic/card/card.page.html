@@ -1,0 +1,60 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Card
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Card</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-card [color]="'primary'">
+    <ion-card-header>
+      <ion-card-subtitle>Color</ion-card-subtitle>
+      <ion-card-title>Color</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      I love you not because of who you are, but because of who I am whenI am with you.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card [color]="'secondary'" [button]="true" (click)="clicked()">
+    <ion-card-header>
+      <ion-card-subtitle>Button</ion-card-subtitle>
+      <ion-card-title>Button</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      I love you not because of who you are, but because of who I am whenI am with you.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <img [src]="'assets/images/ionic/img-technology-vr.png'" alt="pic">
+    <ion-item [lines]="'none'">
+      <ion-label>Try to have fun. Otherwise, what's the point?</ion-label>
+      <ion-button (click)="clicked()">view</ion-button>
+    </ion-item>
+  </ion-card>
+
+  <ion-card [download]="'technology'" [href]="'assets/images/ionic/img-technology-vr.png'">
+    <ion-card-header>
+      <ion-card-subtitle>Download</ion-card-subtitle>
+      <ion-card-title>Download</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      I love you not because of who you are, but because of who I am whenI am with you.
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+

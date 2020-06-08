@@ -12,4 +12,7 @@ export class ButtonPage implements OnInit {
   ngOnInit() {
   }
 
+  clicked() {
+
+  };
 }
