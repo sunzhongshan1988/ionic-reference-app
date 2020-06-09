@@ -35,10 +35,12 @@
 
   <ion-card>
     <img [src]="'assets/images/ionic/img-technology-vr.png'" alt="pic">
-    <ion-item [lines]="'none'">
-      <ion-label>Try to have fun. Otherwise, what's the point?</ion-label>
-      <ion-button (click)="clicked()">view</ion-button>
-    </ion-item>
+    <ion-card-content>
+      <ion-item [lines]="'none'">
+        <ion-label>Try to have fun. Otherwise, what's the point?</ion-label>
+        <ion-button (click)="clicked()">view</ion-button>
+      </ion-item>
+    </ion-card-content>
   </ion-card>
 
   <ion-card [download]="'technology'" [href]="'assets/images/ionic/img-technology-vr.png'">

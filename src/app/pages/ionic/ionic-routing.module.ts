@@ -27,6 +27,14 @@ const routes: Routes = [
     path: 'card',
     loadChildren: () => import('./card/card.module').then( m => m.CardPageModule)
   },
+  {
+    path: 'checkbox',
+    loadChildren: () => import('./checkbox/checkbox.module').then( m => m.CheckboxPageModule)
+  },
+  {
+    path: 'chip',
+    loadChildren: () => import('./chip/chip.module').then( m => m.ChipPageModule)
+  },
 
 ];
 
