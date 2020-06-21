@@ -1,0 +1,21 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Content
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-list>
+    <ion-button expand="block" (click)="toBottom()">To Bottom</ion-button>
+    <ion-item *ngFor="let i of list">
+      <ion-label>Item {{i}}</ion-label>
+    </ion-item>
+    <ion-button expand="block" (click)="toTop()">To Top</ion-button>
+  </ion-list>
+</ion-content>

@@ -35,6 +35,10 @@ const routes: Routes = [
     path: 'chip',
     loadChildren: () => import('./chip/chip.module').then( m => m.ChipPageModule)
   },
+  {
+    path: 'content',
+    loadChildren: () => import('./content/content.module').then( m => m.ContentPageModule)
+  },
 
 ];
 
