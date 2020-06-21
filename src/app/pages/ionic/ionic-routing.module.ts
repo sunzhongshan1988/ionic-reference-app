@@ -39,6 +39,10 @@ const routes: Routes = [
     path: 'content',
     loadChildren: () => import('./content/content.module').then( m => m.ContentPageModule)
   },
+  {
+    path: 'pickers',
+    loadChildren: () => import('./pickers/pickers.module').then( m => m.PickersPageModule)
+  },
 
 ];
 
