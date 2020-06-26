@@ -43,6 +43,14 @@ const routes: Routes = [
     path: 'pickers',
     loadChildren: () => import('./pickers/pickers.module').then( m => m.PickersPageModule)
   },
+  {
+    path: 'fab',
+    loadChildren: () => import('./fab/fab.module').then( m => m.FabPageModule)
+  },
+  {
+    path: 'grid',
+    loadChildren: () => import('./grid/grid.module').then( m => m.GridPageModule)
+  },
 
 ];
 
