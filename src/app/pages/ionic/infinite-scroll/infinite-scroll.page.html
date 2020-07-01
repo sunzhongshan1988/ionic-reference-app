@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      Infinite Scroll
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-item-group *ngIf="itemStatus">
+    <ion-item-divider>
+      <ion-label>Infinite Scroll</ion-label>
+    </ion-item-divider>
+
+    <ion-item *ngFor="let child in item">
+      <ion-avatar slot="start">
+        <img [src]="child.avatar" alt="avatar">
+      </ion-avatar>
+      <ion-label>
+        {{child.text}}
+      </ion-label>
+    </ion-item>
+
+  </ion-item-group>
+</ion-content>
