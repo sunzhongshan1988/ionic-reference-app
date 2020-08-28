@@ -1,7 +1,7 @@
 {
   "name": "ionic-reference-app",
-  "version": "0.0.1",
-  "author": "Alen",
+  "version": "1.0.0",
+  "author": "Weak Brother",
   "homepage": "https://github.com/sunzhongshan1988/",
   "scripts": {
     "ng": "ng",
@@ -19,11 +19,11 @@
     "@angular/platform-browser": "~9.1.6",
     "@angular/platform-browser-dynamic": "~9.1.6",
     "@angular/router": "~9.1.6",
-    "@capacitor/core": "2.1.2",
+    "@capacitor/core": "2.4.0",
     "@ionic-native/core": "^5.0.7",
     "@ionic-native/splash-screen": "^5.0.0",
     "@ionic-native/status-bar": "^5.0.0",
-    "@ionic/angular": "^5.0.0",
+    "@ionic/angular": "^5.3.2",
     "rxjs": "~6.5.1",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
@@ -34,8 +34,8 @@
     "@angular/compiler": "~9.1.6",
     "@angular/compiler-cli": "~9.1.6",
     "@angular/language-service": "~9.1.6",
-    "@capacitor/cli": "2.1.2",
-    "@ionic/angular-toolkit": "^2.1.1",
+    "@capacitor/cli": "2.4.0",
+    "@ionic/angular-toolkit": "^2.3.3",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
@@ -48,6 +48,7 @@
     "karma-jasmine": "~3.0.1",
     "karma-jasmine-html-reporter": "^1.4.2",
     "protractor": "~5.4.3",
+    "surge": "^0.21.6",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
     "typescript": "~3.8.3"
