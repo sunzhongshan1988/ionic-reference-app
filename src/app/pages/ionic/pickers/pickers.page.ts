@@ -12,7 +12,7 @@ export class PickersPage implements OnInit {
   constructor(public pickerController: PickerController,
               public commonService: CommonService) { }
 
-  private defaultColumnOptions = [
+  public defaultColumnOptions = [
     [
       'Dog',
       'Cat',
@@ -22,7 +22,7 @@ export class PickersPage implements OnInit {
     ]
   ];
 
-  private multiColumnOptions = [
+  public multiColumnOptions = [
     [
       'Minified',
       'Responsive',
