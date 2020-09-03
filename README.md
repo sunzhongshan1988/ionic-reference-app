@@ -12,4 +12,4 @@ This is an example of exploring the reference level usage of Ionic and Angular f
 ## PWA Demo
 [PWA APP]
 
-[PWA APP]: http://ionic-reference-app.mozhengxi.me
+[PWA APP]: https://ionic-reference-app.mozhengxi.me
