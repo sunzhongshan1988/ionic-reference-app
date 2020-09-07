@@ -5,7 +5,7 @@
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/sunzhongshan1988/ionic-reference-app)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/3c2ebc0f-6bd1-43a5-ac80-3a912e22e5da/deploy-status)](https://app.netlify.com/sites/ionic-reference-app/deploys)
 
-# About
+# Ionic Reference Application
 
 This is an example of exploring the reference level usage of Ionic and Angular framework.
 
