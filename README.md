@@ -9,7 +9,11 @@ This is an example of exploring the reference level usage of Ionic and Angular f
 - Includes demos of Docker and capacitor driven IOS, Android.
 - This is also an APP demo that can be quickly applied to production.
 - TThis project will only use the latest technology, guys who want to use the old technology are sorry.
-## PWA Demo
-[PWA APP]
+## PWA 
+[PWA Demo]
 
-[PWA APP]: https://ionic-reference-app.mozhengxi.me
+## Android
+
+## IOS
+
+[PWA Demo]: https://ionic-reference-app.mozhengxi.me
