@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">ionic-reference-app</string>
+    <string name="title_activity_main">ionic-reference-app</string>
+    <string name="package_name">me.mozhengxi.ionic.reference</string>
+    <string name="custom_url_scheme">me.mozhengxi.ionic.reference</string>
+</resources>
