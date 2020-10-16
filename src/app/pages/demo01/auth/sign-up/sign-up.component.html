@@ -1,0 +1,79 @@
+<ion-header [translucent]="true" xmlns="http://www.w3.org/1999/html">
+  <ion-toolbar>
+    <ion-title>注册</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/tabs/tab1">
+        <ion-icon slot="icon-only" color="primary"  name="home-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="bg-auth">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="logo ion-margin-top">
+          <img src="../../../../../assets/images/logo/logo-round-1024x1024.png" alt="logo">
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-content>
+            <form [formGroup]="signUpForm" (ngSubmit)="signUp(signUpForm.value)">
+              <ion-item>
+                <ion-input formControlName="username" placeholder="输入邮箱或手机号"></ion-input>
+                <ion-button fill="clear" (click)="clearInput('username')">
+                  <ion-icon slot="icon-only" name="close-outline"></ion-icon>
+                </ion-button>
+              </ion-item>
+              <ion-item>
+                <ion-input formControlName="code" placeholder="输入验证码"></ion-input>
+                <ion-button
+                    fill="clear"
+                    (click)="getVerifyCode(signUpForm.get('username').value)"
+                    [disabled]="isLoadingVerify || signUpForm.get('username').invalid">
+                  {{verifyBtText}}
+                </ion-button>
+              </ion-item>
+              <ion-item>
+                <ion-input formControlName="password" [type]="passwordType" placeholder="输入密码"></ion-input>
+                <ion-button fill="clear" (click)="changeInputType('password')">
+                  <ion-icon slot="icon-only" [name]="this.passwordType==='password'?'eye-outline':'eye-off-outline'"></ion-icon>
+                </ion-button>
+              </ion-item>
+              <ion-item>
+                <ion-input formControlName="rpassword"  [type]="rpasswordType" placeholder="再次输入密码"></ion-input>
+                <ion-button fill="clear" (click)="changeInputType('rpassword')">
+                  <ion-icon slot="icon-only" [name]="this.rpasswordType==='password'?'eye-outline':'eye-off-outline'"></ion-icon>
+                </ion-button>
+              </ion-item>
+              <ion-item>
+                <ion-input formControlName="inviteCode" placeholder="邀请码"></ion-input>
+                <ion-button fill="clear" (click)="clearInput('inviteCode')">
+                  <ion-icon slot="icon-only" name="close-outline"></ion-icon>
+                </ion-button>
+              </ion-item>
+              <ion-item lines="none">
+                <ion-checkbox  formControlName="agreement"></ion-checkbox>
+                <span class="fontSize-s ion-padding-start">我同意<a> 使用条款 </a>与<a> 隐私政策 </a></span>
+              </ion-item>
+              <ion-button expand="block" type="submit" [disabled]="signUpForm.invalid || isLoadingSignUp">
+                注册<ion-spinner name="dots" *ngIf="isLoadingSignUp"></ion-spinner>
+              </ion-button>
+              <ion-item lines="none">
+                <ion-label class="ion-text-center">
+                  <span class="fontSize-s">已有账户？<a routerLink="../login">立即登录</a></span>
+                </ion-label>
+              </ion-item>
+            </form>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div class="copyRight ion-text-center ion-padding-vertical">LETSGO版权所有</div>
+</ion-content>

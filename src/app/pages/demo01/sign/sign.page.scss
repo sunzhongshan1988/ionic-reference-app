@@ -1,0 +1,30 @@
+.card{
+  background: url("/assets/images/other/bg_sign_default_01.png") no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 192px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  .child{
+    width: 100%;
+  }
+}
+.bg01{
+  background: url("/assets/images/other/bg_sign_star_01.png") no-repeat center;
+}
+.bg02{
+  background: url("/assets/images/other/bg_sign_star_02.png") no-repeat center;
+}
+.bg03{
+  background: url("/assets/images/other/bg_sign_star_03.png") no-repeat center;
+}
+.bg04{
+  background: url("/assets/images/other/bg_sign_star_04.png") no-repeat center;
+}
+.bg05{
+  background: url("/assets/images/other/bg_sign_star_05.png") no-repeat center;
+}
+.bg06{
+  background: url("/assets/images/other/bg_sign_star_06.png") no-repeat center;
+}

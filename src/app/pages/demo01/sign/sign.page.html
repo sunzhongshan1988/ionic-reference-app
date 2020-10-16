@@ -1,0 +1,56 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+        <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>签约购物</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row *ngIf="isloading">
+      <ion-col size="12" size-md="6" size-xl="4" *ngFor="let i of [0,1,2]">
+        <div class="card ion-padding-horizontal borderRadius-s">
+          <div>
+            <ion-skeleton-text animated style="width: 30%"></ion-skeleton-text>
+          </div>
+          <div>
+            <ion-skeleton-text animated style="width: 15%"></ion-skeleton-text><br>
+            <ion-skeleton-text animated style="width: 15%"></ion-skeleton-text>
+          </div>
+          <div>
+            <ion-button class="ion-float-end " color="light" [disabled]="true">签约购物</ion-button>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="!isloading">
+      <ion-col size="12" size-md="6" size-xl="4" *ngFor="let data of signListData">
+        <div
+            class="card ion-padding-horizontal borderRadius-s"
+            [ngClass]="{
+            'bg01':data.grade===1,
+            'bg02':data.grade===2,
+            'bg03':data.grade===3,
+            'bg04':data.grade===4,
+            'bg05':data.grade===5,
+            'bg06':data.grade===6}">
+          <div>
+            <ion-text color="light">{{data.name}}智能购物者</ion-text>
+            <br><ion-icon name="star" color="light" *ngFor="let i of newArray(data.grade)"></ion-icon>
+          </div>
+          <div>
+            <ion-text color="light">
+              <span class="fontSize-m">储蓄面值: ${{data.usdt}}</span>
+              <br><span class="fontSize-m">成就分: {{data.mp}}MP</span>
+            </ion-text>
+          </div>
+          <div>
+            <ion-button class="ion-float-end " color="light" (click)="signAlertConfirm(data.usdt, data.name, data.id)">签约购物</ion-button>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

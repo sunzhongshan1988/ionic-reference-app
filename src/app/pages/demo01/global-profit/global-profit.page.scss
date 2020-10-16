@@ -1,0 +1,56 @@
+.banner{
+  background: var(--ion-item-background);
+  height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  .image{
+    height: 180px;
+    img{
+      height: 100%;
+    }
+  }
+  .text{
+    width: 100%;
+  }
+}
+.card{
+  height: 168px;
+  .child01{
+    height: 56px;
+    display: flex;
+    align-items: center;
+  }
+  .child02{
+    height: 112px;
+    display: flex;
+    align-items: center;
+    .tag{
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0px 0px 20px -10px #000;
+    }
+    img{
+      height: 20px;
+    }
+  }
+}
+.bg01{
+  background: url("/assets/images/background/bg_global_profit_02.png") no-repeat top;
+  background-size: cover;
+  .tag{
+    background: rgb(35, 109, 184);
+  }
+}
+.bg02{
+  background: url("/assets/images/background/bg_global_profit_03.png") no-repeat top;
+  background-size: cover;
+  .tag{
+    background: rgb(235, 75, 38);
+  }
+}
+.text-card{
+  background: var(--ion-item-background);
+}

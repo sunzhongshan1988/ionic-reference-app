@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>财务管理</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-card class="banner">
+    <ion-card-content>
+      <div class="flexContainer">
+        <div class="child ion-text-center">
+          <ion-text color="primary" class="fontSize-l">
+            ${{0 | number:'1.2-2'}}
+          </ion-text>
+          <br><span class="fontSize-s">总收入</span>
+        </div>
+        <div class="child ion-text-center">
+          <ion-text color="secondary" class="fontSize-l">
+            ${{0 | number:'1.2-2'}}
+          </ion-text>
+          <br><span class="fontSize-s">总支出</span>
+        </div>
+      </div>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-segment [(ngModel)]="segment">
+      <ion-segment-button value="1">
+        <ion-label>USDT1</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="2">
+        <ion-label>USDT2</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+    <ion-item>
+      <ion-label>已经到底啦！</ion-label>
+    </ion-item>
+  </ion-card>
+
+</ion-content>

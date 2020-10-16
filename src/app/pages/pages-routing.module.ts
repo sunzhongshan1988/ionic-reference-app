@@ -11,7 +11,11 @@ const routes: Routes = [
   {
     path: 'ionic',
     loadChildren: () => import('./ionic/ionic.module').then( m => m.IonicPageModule)
+  },  {
+    path: 'demo01',
+    loadChildren: () => import('./demo01/demo01.module').then( m => m.Demo01PageModule)
   }
+
 ];
 
 @NgModule({

@@ -1,0 +1,86 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>钱包管理</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-content>
+            <ion-item lines="full">
+              <ion-icon slot="start" size="large" class="iconWechat" src="assets/images/icon/icon-bitcoin.svg">
+              </ion-icon>
+              <ion-label>数字钱包管理</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>USDT地址</ion-label>
+              <ion-input placeholder="请输入USDT地址"></ion-input>
+            </ion-item>
+            <div class="ion-padding-top">
+              <ion-button expand="block">保存</ion-button>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-content>
+            <ion-item lines="full">
+              <ion-icon slot="start" size="large" class="iconBankCard" src="assets/images/icon/icon-card.svg">
+              </ion-icon>
+              <ion-label>银行卡管理</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>银行名</ion-label>
+              <ion-input placeholder="请输入USDT地址"></ion-input>
+            </ion-item>
+            <ion-item (click)="countryPicker()">
+              <ion-label>国家或地区</ion-label>
+              <ion-input formControlName="country" [readonly]="true" placeholder="请选择国家"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label>银行卡号</ion-label>
+              <ion-input inputmode="numeric" placeholder="请输入USDT地址"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label>银行地址</ion-label>
+              <ion-input placeholder="请输入USDT地址"></ion-input>
+            </ion-item>
+            <div class="ion-padding-top">
+              <ion-button expand="block">保存</ion-button>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-content>
+            <ion-item lines="full">
+              <ion-icon slot="start" size="large" class="iconAlipay" color="" src="assets/images/icon/icon-zhifubao.svg">
+              </ion-icon>
+              <ion-label>支付宝管理</ion-label>
+            </ion-item>
+            <ion-item>
+              <ion-label>USDT地址</ion-label>
+              <ion-input placeholder="请输入USDT地址"></ion-input>
+            </ion-item>
+            <div class="ion-padding-top">
+              <ion-button expand="block">保存</ion-button>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

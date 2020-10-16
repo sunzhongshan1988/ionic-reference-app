@@ -1,0 +1,20 @@
+.bg-auth{
+  --background: url("/assets/images/other/bg_login_01.png") no-repeat center, var(--ion-color-primary);
+}
+@media only screen and (min-height: 660px){
+  .copyRight{
+    position: fixed;
+    bottom: 32px;
+  }
+}
+.copyRight{
+  width: 100%;
+}
+.logo{
+  width: 100%;
+  text-align: center;
+  img{
+    width: 64px;
+    height: 64px;
+  }
+}

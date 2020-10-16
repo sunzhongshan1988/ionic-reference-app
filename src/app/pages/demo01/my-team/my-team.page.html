@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>我的团队</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div class="banner ion-padding">
+    <div class="imgContainer">
+      <div class="profilePhoto">
+        <img [src]="gvs.dealerInfo.headImg" alt="profilePhoto">
+      </div>
+    </div>
+    <div class="ion-text-center ion-padding-top">
+      <span class="fontSize-l">
+        <ion-text color="secondary">{{this.gvs.dealerInfo.nickname}}</ion-text>
+      </span>
+      <br><span>
+        <ion-text color="secondary">ID:{{this.gvs.dealerInfo.id}}</ion-text>
+      </span>
+    </div>
+    <div class="ion-padding-top">
+      <p>当前团队总人数 <span class="ion-float-end">0人</span></p>
+      <p>当前享受团队奖励总级数<span class="ion-float-end">0</span></p>
+      <p>我的总业绩<span class="ion-float-end">$0</span></p>
+      <p>本月新增业绩<span class="ion-float-end">$0</span></p>
+    </div>
+  </div>
+</ion-content>

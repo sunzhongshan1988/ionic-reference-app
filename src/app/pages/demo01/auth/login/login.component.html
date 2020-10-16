@@ -1,0 +1,68 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>登录</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/tabs/tab1">
+        <ion-icon slot="icon-only" color="primary"  name="home-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="bg-auth">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="logo ion-margin-top">
+          <img src="../../../../../assets/images/logo/logo-round-1024x1024.png" alt="logo">
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-content>
+            <form [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)">
+              <ion-item>
+                <ion-input formControlName="username" placeholder="输入邮箱或手机号"></ion-input>
+                <ion-button fill="clear" (click)="clearInput('username')">
+                  <ion-icon slot="icon-only" name="close-outline"></ion-icon>
+                </ion-button>
+              </ion-item>
+              <ion-item>
+                <ion-input formControlName="password" [type]="passwordType" placeholder="输入密码"></ion-input>
+                <ion-button fill="clear" (click)="changeInputType('password')">
+                  <ion-icon slot="icon-only" [name]="this.passwordType==='password'?'eye-outline':'eye-off-outline'"></ion-icon>
+                </ion-button>
+              </ion-item>
+              <ion-item>
+                <ion-input formControlName="code" placeholder="输入验证码"></ion-input>
+                <ion-button
+                    fill="clear"
+                    (click)="getVerifyCode(loginForm.get('username').value)"
+                    [disabled]="isLoadingVerify || loginForm.get('username').invalid">
+                  {{verifyBtText}}
+                </ion-button>
+              </ion-item>
+              <ion-item lines="none">
+                <ion-label>
+                  <span class="fontSize-s ion-float-end"><a routerLink="../forgot-passwd">忘记密码？</a></span>
+                </ion-label>
+              </ion-item>
+              <ion-button type="submit" [disabled]="loginForm.invalid || isLoadingLogin" expand="block">
+                登录<ion-spinner name="dots" *ngIf="isLoadingLogin"></ion-spinner>
+              </ion-button>
+            </form>
+            <ion-item lines="none">
+              <ion-label class="ion-text-center">
+                <span class="fontSize-s">还没有账户？<a routerLink="../sign-up">立即注册</a></span>
+              </ion-label>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div class="copyRight ion-text-center ion-padding-vertical">LETSGO版权所有</div>
+</ion-content>

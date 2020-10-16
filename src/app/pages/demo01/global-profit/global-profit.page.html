@@ -1,0 +1,67 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>全球分红</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="12" size-xl="6">
+        <div class="banner borderRadius-s">
+          <div class="image ion-text-center">
+            <img src="/src/assets/images/background/bg_global_profit_01.png" alt="">
+          </div>
+          <div class="ion-text-center">本月已产生份额：{{0 | number: '1.0-0'}}</div>
+        </div>
+      </ion-col>
+      <ion-col size="12" size-xl="6">
+        <ion-row>
+          <ion-col size="6">
+            <div class="card bg01 borderRadius-s">
+              <div class="child01">
+                <div class="ion-padding-horizontal">
+                  <ion-text color="light">本月分红累计</ion-text>
+                  <br><ion-text color="light" class="fontSize-m">${{0|number:'1.2-2'}}</ion-text>
+                </div>
+              </div>
+              <div class="child02 ion-text-center">
+                <div class="tag ion-padding-vertical">
+                  <img src="../../../assets/images/other/icon_level_ps5.png">
+                  &nbsp;<ion-text color="light" class="fontSize-s">PS5全球分红池</ion-text>
+                </div>
+              </div>
+            </div>
+          </ion-col>
+          <ion-col size="6">
+            <div class="card bg02 borderRadius-s">
+              <div class="child01">
+                <div class="ion-padding-horizontal">
+                  <ion-text color="light">本月分红累计</ion-text>
+                  <br><ion-text color="light" class="fontSize-m">${{0|number:'1.2-2'}}</ion-text>
+                </div>
+              </div>
+              <div class="child02 ion-text-center">
+                <div class="tag ion-padding-vertical">
+                  <img src="../../../assets/images/other/icon_level_ps6.png">
+                  &nbsp;<ion-text color="light" class="fontSize-s">PS6全球分红池</ion-text>
+                </div>
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="borderRadius-s text-card ion-padding">
+          PS5与PS6全球分红池，将通过HOLALA平台在全球所产生的每一笔智能购物奖金中，额外分配10%各自进入PS5与PS6全球分红池中。
+          <br><strong>例如：</strong>某智能购物者成功获取30元智能购物奖金，PS5与PS6分红池各自增加3元.
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

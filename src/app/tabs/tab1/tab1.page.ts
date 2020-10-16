@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {MenuController} from "@ionic/angular";
-import {CommonService} from "../../core/services/common.service";
+import {MenuController} from '@ionic/angular';
+import {CommonService} from '../../core/services/common.service';
 
 @Component({
   selector: 'app-tab1',

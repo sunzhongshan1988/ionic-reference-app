@@ -1,0 +1,68 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>忘记密码</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/tabs/tab1">
+        <ion-icon slot="icon-only" color="primary"  name="home-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="bg-auth">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <div class="logo ion-margin-top">
+          <img src="../../../../../assets/images/logo/logo-round-1024x1024.png" alt="logo">
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-content>
+            <form [formGroup]="forgotPasswdForm" (ngSubmit)="forgotPasswd(forgotPasswdForm.value)">
+              <ion-item>
+                <ion-input formControlName="username" placeholder="输入注册邮箱或手机号"></ion-input>
+                <ion-button fill="clear" (click)="clearInput('username')">
+                  <ion-icon slot="icon-only" name="close-outline"></ion-icon>
+                </ion-button>
+              </ion-item>
+              <ion-item>
+                <ion-input formControlName="code" placeholder="输入验证码"></ion-input>
+                <ion-button fill="clear"
+                            (click)="getVerifyCode(forgotPasswdForm.get('username').value)"
+                            [disabled]="isLoadingVerify || forgotPasswdForm.get('username').invalid">
+                  {{verifyBtText}}
+                </ion-button>
+              </ion-item>
+              <ion-item>
+                <ion-input formControlName="password" [type]="passwordType" placeholder="输入新密码"></ion-input>
+                <ion-button fill="clear" (click)="changeInputType('password')">
+                  <ion-icon slot="icon-only" [name]="this.passwordType==='password'?'eye-outline':'eye-off-outline'"></ion-icon>
+                </ion-button>
+              </ion-item>
+              <ion-item>
+                <ion-input formControlName="rpassword" [type]="rpasswordType" placeholder="再次输入新密码"></ion-input>
+                <ion-button fill="clear" (click)="changeInputType('rpassword')">
+                  <ion-icon slot="icon-only" [name]="this.rpasswordType==='password'?'eye-outline':'eye-off-outline'"></ion-icon>
+                </ion-button>
+              </ion-item>
+              <ion-button expand="block" type="submit" [disabled]="forgotPasswdForm.invalid || isLoading">
+                重置密码<ion-spinner name="dots" *ngIf="isLoading"></ion-spinner>
+              </ion-button>
+              <ion-item lines="none">
+                <ion-label class="ion-text-center">
+                  <span class="fontSize-s">已有账户？<a routerLink="../login">立即登录</a></span>
+                </ion-label>
+              </ion-item>
+            </form>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div class="copyRight ion-text-center ion-padding-vertical">LETSGO版权所有</div>
+</ion-content>

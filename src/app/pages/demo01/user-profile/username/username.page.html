@@ -1,0 +1,40 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>修改用户名</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-content>
+            <form [formGroup]="usernameForm" (ngSubmit)="submitUsername(usernameForm.value)">
+              <ion-item [disabled]="true">
+                <ion-label>用户名</ion-label>
+                <ion-input [value]="gvs.dealerInfo.nickname"></ion-input>
+
+              </ion-item>
+              <ion-item>
+                <ion-label>新用户名</ion-label>
+                <ion-input formControlName="username" placeholder="请输入新用户名"></ion-input>
+                <ion-button fill="clear" (click)="clearInput('username')">
+                  <ion-icon slot="icon-only" name="close-outline"></ion-icon>
+                </ion-button>
+              </ion-item>
+              <div class="ion-padding-top">
+                <ion-button type="submit" [disabled]="usernameForm.invalid || isLoading" expand="block">
+                  提交<ion-spinner name="dots" *ngIf="isLoading"></ion-spinner>
+                </ion-button>
+              </div>
+            </form>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

@@ -1,0 +1,60 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>身份认证</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-card>
+    <ion-item lines="none">
+      <ion-label>当前状态</ion-label>
+      <span class="ion-text-end">
+        <ion-text color="primary">填写信息</ion-text>
+      </span>
+    </ion-item>
+  </ion-card>
+  <ion-card>
+    <ion-segment [(ngModel)]="segment" >
+      <ion-segment-button value="IDCard">
+        <ion-label>身份证</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="passport" [disabled]="true">
+        <ion-label>护照</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>真实姓名</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>身份证号码</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+      <div class="ion-padding-top"></div>
+      <ion-item lines="none">
+        <ion-label>身份证正面</ion-label>
+      </ion-item>
+      <div class="ion-activatable IDCard borderRadius-s" (click)="upload('idCardFront')">
+        <ion-icon name="image-outline" size="large"></ion-icon>
+        <ion-ripple-effect></ion-ripple-effect>
+        <upload (link)="frontLink($event)" [type]="uploadFileType" [size]="3" [name]="'idCardFront'"></upload>
+      </div>
+      <div class="ion-padding-top"></div>
+      <ion-item lines="none">
+        <ion-label>身份证背面</ion-label>
+      </ion-item>
+      <div class="ion-activatable IDCard borderRadius-s" (click)="upload('idCardBack')">
+        <ion-icon name="image-outline" size="large"></ion-icon>
+        <ion-ripple-effect></ion-ripple-effect>
+        <upload (link)="backLink($event)" [type]="uploadFileType" [size]="3" [name]="'idCardBack'"></upload>
+      </div>
+      <div class="ion-padding-top"></div>
+      <ion-button expand="block">提交</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

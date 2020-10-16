@@ -1,0 +1,16 @@
+<!-- Uoload file -->
+<input
+    type="file"
+    accept="image/*"
+    [style.display]="'none'"
+    [id]="name"
+    (change)="uploadFile($event)"
+/>
+<input
+    type="file"
+    accept="image/*"
+    capture
+    [style.display]="'none'"
+    [id]="name+'Camera'"
+    (change)="uploadFile($event)"
+/>
