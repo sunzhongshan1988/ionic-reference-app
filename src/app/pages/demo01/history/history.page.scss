@@ -1,0 +1,22 @@
+.banner{
+  display: flex;
+  justify-content: space-around;
+  background: var(--ion-item-background);
+}
+.listItem{
+  width:100%;
+  display: flex;
+  justify-content: space-between;
+  .child1{
+    flex: 1;
+    text-align: center;
+  }
+  .child2{
+    flex: 1;
+    text-align: center;
+  }
+  .child3{
+    flex: 1;
+    text-align: center;
+  }
+}

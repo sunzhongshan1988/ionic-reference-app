@@ -1,0 +1,62 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>记录</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-segment [(ngModel)]="segment">
+          <ion-segment-button value="order">
+            <ion-label>智能购物商品</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="team">
+            <ion-label>团队奖金</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="segment==='order'">
+
+    </ion-row>
+    <ion-row *ngIf="segment==='team'">
+      <ion-col size="12">
+        <ion-card>
+          <ion-card-content>
+            <div class="banner">
+              <div class="ion-text-center">
+                <span class="fontSize-xl"><ion-text color="secondary">$0.0000</ion-text></span>
+                <br><span class="fontSize-s">今日获取团队奖金</span>
+              </div>
+              <div class="ion-text-center">
+                <span class="fontSize-xl"><ion-text color="secondary">$0.0000</ion-text></span>
+                <br><span class="fontSize-s">累计获取团队奖金</span>
+              </div>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="12">
+        <ion-card>
+          <ion-card-content>
+            <ion-item lines="full" class="listItem">
+              <div class="child1"><p>时间</p></div>
+              <div class="child2"><p>奖金</p></div>
+              <div class="child3"><p>来源</p></div>
+            </ion-item>
+            <div *ngFor="let i of [1,2,3,4,5,6]">
+              <div class="listItem ion-padding-top">
+                <div class="child1 fontSize-s">2020-12-12</div>
+                <div class="child2 fontSize-s">${{2500.0000*i | number:'1.4-4'}}</div>
+                <div class="child3 fontSize-s">全球分红</div>
+              </div>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

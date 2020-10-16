@@ -1,0 +1,61 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>学院</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-segment [(ngModel)]="segment">
+          <ion-segment-button value="videos">
+            <ion-label>视频专区</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="documents">
+            <ion-label>文档专区</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="segment==='videos'">
+      <ion-col size="12">
+        <ion-card class="banner">
+          <ion-grid>
+            <ion-row class="ion-justify-content-center">
+              <ion-col class="ion-align-self-center ion-text-center">
+                <img class="banner" src="../../../assets/images/other/img_college_01.png" alt="banner">
+              </ion-col>
+              <ion-col class="ion-align-self-center ion-text-center">
+                <img class="logo" [src]="globalVarService.logoRound" alt="logo">
+                <br><ion-text><b>Letsgo在线教育商学院</b></ion-text>
+                <br><ion-button size="small">进入教室</ion-button>
+                <br><ion-text>每周一~周六晚20:00举行直播活动</ion-text>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card>
+      </ion-col>
+      <ion-col sizeXs="6" sizeMd="4" sizeXl="3"  *ngFor="let i of [1,2,3,4,5,6]">
+        <ion-card>
+          <img src="../../../assets/images/other/bg_card_01.png" alt="card">
+          <ion-item lines="none">
+            <ion-label><span class="fontSize-s">Letsgo平台宣传片</span></ion-label>
+            <ion-button color="secondary">播放</ion-button>
+          </ion-item>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="segment==='documents'">
+      <ion-col sizeXs="6" sizeMd="4" sizeXl="3" *ngFor="let i of [1,2,3,4,5,6]">
+        <ion-card>
+          <img src="../../../assets/images/other/bg_card_02.png" alt="card">
+          <ion-item lines="none">
+            <ion-label><span class="fontSize-s">教程</span></ion-label>
+            <ion-button color="secondary">查看</ion-button>
+          </ion-item>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

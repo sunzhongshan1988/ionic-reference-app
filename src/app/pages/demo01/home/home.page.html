@@ -1,0 +1,127 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-img class="logo" [src]='globalVarService.logoDark'></ion-img>
+    <ion-buttons slot="end">
+      <ion-button color="primary" fill="clear"
+                  routerLink="/pages/auth/login">
+        登录/注册
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <ion-slides pager="true" [options]="slideOpts">
+          <ion-slide *ngFor="let banner of bannerList">
+            <img [src]="banner.src" alt="">
+          </ion-slide>
+        </ion-slides>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div class="menu fontSize-m">
+          <div class="child bg01 borderRadius-m"  routerLink="/pages/sign">
+            <img src="../../../assets/images/icons/icon-diamond.png" alt="sign">
+            <br><ion-text color="light"><span>签约</span></ion-text>
+          </div>
+          <div  class="child bg03 borderRadius-m" routerLink="/pages/recharge">
+            <img src="../../../assets/images/icons/icon-wallet.png" alt="recharge">
+            <br><ion-text color="light"><span>充值</span></ion-text>
+          </div>
+          <div  class="child bg02 borderRadius-m">
+            <img src="../../../assets/images/icons/icon-bankcard.png" alt="withdraw">
+            <br><ion-text color="light"><span>提现</span></ion-text>
+          </div>
+          <div  class="child bg04 borderRadius-m" routerLink="/pages/global-profit">
+            <img src="../../../assets/images/icons/icon-earth.png" alt="profit">
+            <br><ion-text color="light"><span>全球分红</span></ion-text>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-card>
+    <ion-segment [(ngModel)]="segment" (ionChange)="segmentChanged($event)">
+      <ion-segment-button value="about">
+        <ion-label>简介</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="rules">
+        <ion-label>规则</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="news">
+        <ion-label>资讯</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="notification">
+        <ion-label>通知</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+    <ion-card-content>
+      <div *ngIf="segment==='about'">
+        <ion-text color="secondary">
+          <p><b>欢迎来到HOLALA！</b></p>
+        </ion-text>
+        <ion-text color="medium">
+          <p>这是全球顶尖的智能购物平台，皆在为全球顶级电商平台中的优质商家提供订单智能购物服务，借此提升各大商家在平台中的销售量、信誉度与美誉度，大大提升产品信任度及品牌影响力，并与快速发展的全球电子商务领域共同起飞与发展，为互联网世界增添价值及新的色彩！</p>
+        </ion-text>
+      </div>
+      <div *ngIf="segment==='rules'">
+        <ion-text color="secondary">
+          <p><b>1. 账户</b></p>
+        </ion-text>
+        <ion-text color="medium">
+          <p>任何互联网用户均可成为HOLALA平台签约智能购物者。由于相同用户重复多次智能购物会导致商家可能会面临封店等风险，所以每人有且仅能注册并拥有一个账户。以手机号、身份证件等作为判断标准。如个人拥有2个以上的账户，一经发现，平台拥有永久封号并冻结所有资产的权利。</p>
+        </ion-text>
+        <ion-text color="secondary">
+          <p><b>2. 智能购物</b></p>
+        </ion-text>
+        <ion-text color="medium">
+          <p>HOLALA智能购物为全自动系统，不需个人手动重复下达指令。但需在GMT+8时区的每日00:00分之后，手动启动一次智能购物指令，系统即可进行全天24小时的智能购物执行。如当日没有启动自动智能购物，则当日系统不会执行智能购物指令。</p>
+        </ion-text>
+        <ion-text color="secondary">
+          <p><b>3. 智能购物奖励</b></p>
+        </ion-text>
+        <ion-text color="medium">
+          <p>智能购物奖励为订单价格的0.3%。您可能会刷到不限于某个国家的任何产品，通用计价货币均为美元。每日能够刷到智能购物的价格以及数量均为智能随机匹配所带来的结果。其成功率也与商家上传最新需要智能购物的产品的数量，以及您本身所签约智能购物资金的大小有一定关联。通常情况下，配套越高，可刷到产品的范围越广，智能购物的成功率也会越高。</p>
+        </ion-text>
+        <ion-text color="secondary">
+          <p><b>4. 存款与提现</b></p>
+        </ion-text>
+        <ion-text color="medium">
+          <p>任何智能购物者均可通过与美元计价一致的USDT进行全球存取款以及法币的兑换。提取收益时间为——每周六、周日均可申请提现。到账时间为工作日T+3。</p>
+        </ion-text>
+      </div>
+      <div *ngIf="segment==='news'">
+        <img src="../../assets/images/other/zh_cn-home-news.png">
+      </div>
+      <div *ngIf="segment==='notification'">
+        <ion-list>
+          <ion-item class="noPaddingItem" *ngFor="let child of notification">
+            <ion-label class="ion-text-wrap">
+              <ion-text color="medium">
+                <p>{{child.time}}</p>
+              </ion-text>
+              <ion-text color="secondary">
+                <p><b>{{child.title}}</b></p>
+              </ion-text>
+              <ion-text color="medium">
+                <p>{{child.content}}</p>
+              </ion-text>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </div>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

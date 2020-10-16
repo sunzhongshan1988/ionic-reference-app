@@ -1,0 +1,37 @@
+// header
+.logo{
+  margin-left: 12px;
+  height: 36px;
+  width: 120px;
+}
+// sliders
+ion-slide{
+  width: 86%;
+}
+// menu
+.menu {
+  display: flex;
+  justify-content: space-between;
+
+  .child {
+    outline: none;
+    height: 84px;
+    width: 84px;
+    text-align: center;
+    img{
+      height: 48px;
+    }
+  }
+  .bg01 {
+    background: #E96876;
+  }
+  .bg02 {
+    background: #F8B552;
+  }
+  .bg03 {
+    background: #68a3da;
+  }
+  .bg04 {
+    background: #81C16A;
+  }
+}

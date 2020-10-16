@@ -1,0 +1,30 @@
+.flexContainer{
+  display: flex;
+  justify-content: space-around;
+  .child{
+    flex: 1;
+  }
+}
+.timer{
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 224px;
+  background: var(--ion-color-secondary);
+  text-align: center;
+  color: var(--ion-color-secondary-contrast);
+}
+.order{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 224px;
+  background: url("/assets/images/other/bg_map_01.png") no-repeat top 30% center, var(--ion-item-background);
+  background-size: 100% auto;
+  .action{
+    display: flex;
+    justify-content: space-around;
+  }
+}

@@ -51,6 +51,26 @@ const routes: Routes = [
   {
     path: 'about-us',
     loadChildren: () => import('./about-us/about-us.module').then( m => m.AboutUsPageModule)
+  },
+  {
+    path: 'home',
+    loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
+  },
+  {
+    path: 'my',
+    loadChildren: () => import('./my/my.module').then( m => m.MyPageModule)
+  },
+  {
+    path: 'learn',
+    loadChildren: () => import('./learn/learn.module').then( m => m.LearnPageModule)
+  },
+  {
+    path: 'buy',
+    loadChildren: () => import('./buy/buy.module').then( m => m.BuyPageModule)
+  },
+  {
+    path: 'history',
+    loadChildren: () => import('./history/history.module').then( m => m.HistoryPageModule)
   }
 ];
 

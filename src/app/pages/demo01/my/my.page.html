@@ -1,0 +1,90 @@
+<ion-content>
+  <ion-header>
+    <div class="banner ion-padding">
+      <div class="imgContainer">
+        <div class="profilePhoto">
+          <img [src]="gvs.dealerInfo.headImg" alt="profilePhoto">
+        </div>
+      </div>
+      <div class="ion-text-center ion-padding-top">
+      <span class="fontSize-l">
+        <ion-text color="secondary">{{this.gvs.dealerInfo.nickname}}</ion-text>
+      </span>
+        <br><span>
+        <ion-text color="secondary">ID:{{this.gvs.dealerInfo.id}}</ion-text>
+      </span>
+      </div>
+      <div class="level ion-padding-vertical">
+        <div><ion-text color="secondary">当前 {{gvs.signGrade.mp}}MP</ion-text></div>
+        <div class="bar"><ion-progress-bar color="secondary" value="0.5"></ion-progress-bar></div>
+        <div><ion-text color="secondary">下一级 0MP</ion-text></div>
+      </div>
+      <div class="nextLevel ion-padding-top">
+        <div>
+          <ion-text color="secondary">当前距升级 Shopper 100</ion-text>
+          <br><ion-text color="secondary">需充值 $100 + 0MP</ion-text>
+        </div>
+        <div>
+          <ion-button routerLink="/pages/sign">立即升级</ion-button>
+        </div>
+      </div>
+    </div>
+  </ion-header>
+  <ion-card>
+    <div class="summary borderRadius-s ion-padding borderRadius-s">
+      <div class="ion-text-center">
+        <span><ion-text color="secondary">$0.00</ion-text></span>
+        <br><span class="fontSize-s">USDT1</span>
+      </div>
+      <div class="ion-text-center">
+        <span><ion-text color="secondary">$0.00</ion-text></span>
+        <br><span class="fontSize-s">USDT2</span>
+      </div>
+      <div class="ion-text-center">
+        <span><ion-text>0</ion-text></span>
+        <br><span class="fontSize-s">购物资产</span>
+      </div>
+      <div class="ion-text-center">
+        <span><ion-text>0</ion-text></span>
+        <br><span class="fontSize-s">MP成就分</span>
+      </div>
+    </div>
+  </ion-card>
+  <ion-card>
+    <div class="ion-padding-vertical">
+      <ion-item detail="true" routerLink="/pages/user-profile">
+        <ion-icon name="book-outline" color="primary"></ion-icon>
+        <span class="ion-padding-start"><ion-text>个人资料</ion-text></span>
+      </ion-item>
+      <ion-item detail="true" routerLink="/pages/my-team">
+        <ion-icon name="people-outline" color="secondary"></ion-icon>
+        <span class="ion-padding-start"><ion-text>我的团队</ion-text></span>
+      </ion-item>
+      <ion-item detail="true" routerLink="/pages/finance">
+        <ion-icon name="card-outline" color="secondary"></ion-icon>
+        <span class="ion-padding-start"><ion-text>财务管理</ion-text></span>
+      </ion-item>
+      <ion-item detail="true" routerLink="/pages/wallet">
+        <ion-icon name="wallet-outline" color="tertiary"></ion-icon>
+        <span class="ion-padding-start"><ion-text>钱包管理</ion-text></span>
+      </ion-item>
+      <ion-item detail="true" routerLink="/pages/password">
+        <ion-icon name="lock-closed-outline" color="danger"></ion-icon>
+        <span class="ion-padding-start"><ion-text>密码管理</ion-text></span>
+      </ion-item>
+      <ion-item detail="true" routerLink="/pages/invite">
+        <ion-icon name="share-social-outline" color="success"></ion-icon>
+        <span class="ion-padding-start"><ion-text>邀请好友</ion-text></span>
+      </ion-item>
+      <ion-item detail="true" routerLink="/pages/about-us">
+        <ion-icon name="information-circle-outline" color="secondary"></ion-icon>
+        <span class="ion-padding-start"><ion-text>关于我们</ion-text></span>
+      </ion-item>
+      <ion-item lines="none" (click)="logoutAlertConfirm()" [button]="true">
+        <ion-icon name="log-out-outline" color="medium"></ion-icon>
+        <span class="ion-padding-start"><ion-text>安全退出</ion-text></span>
+      </ion-item>
+    </div>
+  </ion-card>
+
+</ion-content>

@@ -24,3 +24,64 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+@media screen and (width < 576px) {
+  html, body{
+    font-size: 75% !important;
+  }
+}
+
+// Layout
+.borderRadius-s {
+  border-radius: 0.4rem;
+}
+.borderRadius-m {
+  border-radius: 0.6rem;
+}
+.borderRadius-l {
+  border-radius: 0.8rem;
+}
+
+.fontSize-s {
+  font-size: 0.8rem;
+}
+.fontSize-m {
+  font-size: 1rem
+}
+.fontSize-l {
+  font-size: 1.2rem
+}
+.fontSize-xl {
+  font-size: 2rem
+}
+.fontSize-xxl {
+  font-size: 3.6rem
+}
+
+// Colors
+.iconBankCard {
+  color: #febe42;
+}
+.iconWechat {
+  color: #11CD6E;
+}
+.iconAlipay {
+  color: #327afe;
+}
+
+// Change system style
+.noPaddingItem{
+  --padding-start: 0;
+  --padding-end: 0;
+}
+ion-grid{
+
+}
+ion-row{
+
+}
+ion-col{
+  ion-card{
+    margin: 0 !important;
+  }
+}

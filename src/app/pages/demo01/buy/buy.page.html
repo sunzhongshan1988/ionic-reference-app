@@ -1,0 +1,84 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>购物</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card class="banner">
+          <ion-card-content>
+            <div class="flexContainer">
+              <div class="child ion-text-center">
+                <ion-text color="primary" class="fontSize-xl">
+                  ${{mateTotal.today.reward | number:'1.2-2'}}
+                </ion-text>
+                <br><span class="fontSize-s">今日智能购物已获奖金</span>
+              </div>
+              <div class="child ion-text-center">
+                <ion-text color="secondary" class="fontSize-xl">
+                  ${{mateTotal.today.total | number:'1.2-2'}}
+                </ion-text>
+                <br><span class="fontSize-s">购物资产</span>
+              </div>
+            </div>
+            <div class="ion-padding-vertical"></div>
+            <div  class="flexContainer">
+              <div class="child ion-text-center">
+                <ion-text class="fontSize-l">{{mateTotal.today.cnt}}</ion-text>
+                <br><span class="fontSize-s">今日已智能购物数</span>
+              </div>
+              <div class="child ion-text-center">
+                <ion-text class="fontSize-l">{{mateTotal.team.cntTeam}}</ion-text>
+                <br><span class="fontSize-s">今日团队已智能购物数 </span>
+              </div>
+            </div>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="4">
+        <div class="timer borderRadius-s ion-padding-bottom">
+          <div >
+            <span class="fontSize-xxl">{{timer01}}</span>
+            <br><span class="fontSize-s">智能购物倒计时</span>
+          </div>
+          <div class="fontSize-s">
+            <br><span>今日剩余购物时间</span>
+            <br><span>{{timer02}}</span>
+          </div>
+          <div class="fontSize-s">
+            <br><span>GMT+8时区每日00:00需重新启动自动购物功能</span>
+          </div>
+        </div>
+      </ion-col>
+      <ion-col size="8">
+        <div class="order borderRadius-s">
+          <div class="action ion-padding-vertical">
+            <ion-button color="primary" [disabled]="isBuying" (click)="submitMateOpen()">开始购物</ion-button>
+            <ion-button color="warning" [disabled]="!isBuying" (click)="submitMateClose()">停止购物</ion-button>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle><ion-text color="secondary">智能购物说明</ion-text></ion-card-subtitle>
+          </ion-card-header>
+          <ion-card-content>
+            <p>系统可实现全天自动智能购物，您只需每天启动一次系统即可。
+              可自动获取当天商家所发布的最新需要推广的商品。
+              匹配后，10分钟系统将完成退货流程，产品支付金额将返回您的账户中，
+              并同时获得0.3%的智能购物奖励。</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
