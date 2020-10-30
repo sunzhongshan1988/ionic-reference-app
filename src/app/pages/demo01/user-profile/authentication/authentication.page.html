@@ -42,7 +42,7 @@
       <div class="ion-activatable IDCard borderRadius-s" (click)="upload('idCardFront')">
         <ion-icon name="image-outline" size="large"></ion-icon>
         <ion-ripple-effect></ion-ripple-effect>
-        <upload (link)="frontLink($event)" [type]="uploadFileType" [size]="3" [name]="'idCardFront'"></upload>
+        <app-upload (link)="frontLink($event)" [type]="uploadFileType" [size]="3" [name]="'idCardFront'"></app-upload>
       </div>
       <div class="ion-padding-top"></div>
       <ion-item lines="none">
@@ -51,7 +51,7 @@
       <div class="ion-activatable IDCard borderRadius-s" (click)="upload('idCardBack')">
         <ion-icon name="image-outline" size="large"></ion-icon>
         <ion-ripple-effect></ion-ripple-effect>
-        <upload (link)="backLink($event)" [type]="uploadFileType" [size]="3" [name]="'idCardBack'"></upload>
+        <app-upload (link)="backLink($event)" [type]="uploadFileType" [size]="3" [name]="'idCardBack'"></app-upload>
       </div>
       <div class="ion-padding-top"></div>
       <ion-button expand="block">提交</ion-button>

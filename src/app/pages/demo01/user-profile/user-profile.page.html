@@ -15,7 +15,7 @@
               <ion-thumbnail slot="end" (click)="uploadHead('head')">
                 <img [src]="gvs.dealerInfo.headImg" alt="profilePhoto">
               </ion-thumbnail>
-              <upload (link)="fileLink($event)" [type]="uploadFileType" [size]="3" [name]="'head'"></upload>
+              <app-upload (link)="fileLink($event)" [type]="uploadFileType" [size]="3" [name]="'head'"></app-upload>
             </ion-item>
             <ion-item [detail]="true" routerLink="/pages/user-profile/username">
               <ion-label>
